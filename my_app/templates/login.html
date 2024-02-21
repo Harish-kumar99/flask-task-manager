@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="container">
+   <div class="row">
+      <div class="col">
+         <form action="" method="post" novalidate>
+            <p>
+               {{ form.email.label }}<br>
+               {{ form.email(size =32) }}
+            </p>
+            <p>
+               {{ form.password.label }}<br>
+               {{ form.password(size=32) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+         </form>
+      </div>
+   </div>
+</section>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% if request.method == 'POST' %}
+            <div class="alert alert-danger mt-3" role="alert">
+                {{ messages[0][1] }}
+            </div>
+        {% endif %}
+    {% endif %}
+{% endwith %}
+
+{% endblock %}

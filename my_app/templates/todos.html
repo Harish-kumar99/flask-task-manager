@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{% block content%}
+<style>
+    .edit-button {
+        color: blue; 
+        font-weight: bold; 
+    }
+
+    .delete-button {
+        color: red;
+        font-weight: bold;
+    }
+    .add_button {
+         background-color: #4CAF50;
+         border: none;
+         color: white;
+         padding: 15px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         cursor: pointer;
+    }
+    
+</style>
+
+<section class="container">
+   <a href={{ url_for('tasks.add_tasks') }}>
+   <button class="add_button ">Add New Task</button>
+   </a>
+   <div class="row">
+      <div class="col" >
+         {% for todo in todos %}
+         <ul id =round>
+            <li>Name: {{todo.task_name}}</li>
+            <br>
+            <li>Due Date: {{todo.due_date.strftime('%A, %d-%b-%Y')}}</li>
+            <br>
+            <li>Status: {{todo.status}}</li>
+            <br>
+            <a href="{{ url_for('tasks.edit_task', id=todo.id) }}" class="edit-button">Edit Task</a>
+            <br>
+            <a href="{{ url_for('tasks.delete', id=todo.id) }}" class="delete-button">Delete Task</a>
+            <br>
+         </ul>
+         {% endfor %}
+      </div>
+   </div>
+</section>
+{% endblock %}
+<!-- <li><a href = "{{ url_for('post', id=todo['id']) }}">{{todo.task_name}}</a></p> -->
