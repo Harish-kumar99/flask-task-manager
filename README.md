@@ -55,7 +55,7 @@ This Flask Task Manager App is designed to help you manage your tasks efficientl
 3. Create a `.env` file with your secret keys:
    ```env
    SECRET_KEY=your_secret_key
-   DATABASE_URL=your_database_url
+   PORT=your_port
    ```
 
 4. Build and run the Docker container:
