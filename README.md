@@ -44,7 +44,7 @@ This Flask Task Manager App is designed to help you manage your tasks efficientl
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/flask-task-manager.git
+   git clone https://github.com/Harish-kumar99/flask-task-manager.git
    ```
 
 2. Navigate to the project directory:
