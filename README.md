@@ -1,7 +1,7 @@
 
 # Flask Task Manager App
 
-## Overview
+## Overview 
 
 This Flask Task Manager App is designed to help you manage your tasks efficiently. It provides a set of APIs for creating, updating, deleting, and retrieving tasks. The app also features a user registration and login system with password encryption for enhanced security. Logging and proper error messages are implemented to ensure a smooth user experience. Additionally, sensitive information such as secret keys is managed using a `.env` file. The entire project is dockerized, allowing for easy deployment with custom ports.
 
