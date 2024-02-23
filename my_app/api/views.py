@@ -106,7 +106,7 @@ def delete(id):
         if task:
             db.session.delete(task)
             db.session.commit()
-            logger.info('Task deleted by user %s: %s', current_user.email, task.task_name)
+            logger.info('Task deleted by user %s: %s', current_user.email, task.task_name);
             return redirect('/todos')
         abort(404)
 
